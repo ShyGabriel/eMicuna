@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminAddNewProductActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Añade a la Base de Datos"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryText"
+        android:textAlignment="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_below="@id/tv_title"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:lottie_rawRes="@raw/add_firebase"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"/>
+
+    <ImageView
+        android:background="@drawable/secondary_button"
+        android:src="@drawable/ic_add"
+        android:layout_marginTop="15dp"
+        android:layout_below="@id/lottie"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+
+    <EditText
+        android:id="@+id/product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image_view"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/ic_add"
+        android:drawablePadding="15dp"
+        android:padding="15dp"
+        android:hint="Nombre de comida/bebida"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryText"
+        />
+
+    <EditText
+        android:id="@+id/product_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_name"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/ic_add"
+        android:drawablePadding="15dp"
+        android:padding="15dp"
+        android:hint="Descripcion"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryText"
+        />
+
+    <EditText
+        android:id="@+id/product_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_description"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/ic_add"
+        android:drawablePadding="15dp"
+        android:padding="15dp"
+        android:hint="Precio"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryText"
+        />
+
+    <EditText
+        android:id="@+id/product_restaurant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/product_price"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawableStart="@drawable/ic_add"
+        android:drawablePadding="15dp"
+        android:padding="15dp"
+        android:hint="Restaurant/Tienda"
+        android:inputType="textPersonName"
+        android:textColor="@color/colorPrimaryText"/>
+
+    <Button
+        android:id="@+id/add_new_product_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:background="@drawable/main_button"
+        android:text="Añadir"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorWhite"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminCategoryActivity">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Añade comidas y bebidas"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryText"
+        android:textAlignment="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:text="5 secciones de comidas para añadir."
+        android:textSize="15sp"
+        android:textColor="@color/colorPrimaryText"
+        android:textAlignment="center"
+        android:layout_marginBottom="25sp"
+        />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_below="@id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="25dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_fav"
+            android:layout_margin="5dp"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fondofav"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                android:text="Añadir Comida Popular"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="5dp"
+            android:id="@+id/cv_peru"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fondoperu"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                android:text="Añadir Comida Peruana"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="5dp"
+            android:id="@+id/cv_fastfood"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fondofastfood"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                android:text="Añadir Comida Rapida"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="5dp"
+            android:id="@+id/cv_antojo"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fondoantojo"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                android:text="Añadir Antojos"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/cv_bebida"
+            app:cardCornerRadius="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/fondobebida"/>
+            <TextView
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimaryText"
+                android:text="Añadir Bebida"
+                android:textSize="25sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

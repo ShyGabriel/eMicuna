@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="15dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/product_name_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="20sp"
+            android:layout_margin="10dp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryText"/>
+        <ImageView
+            android:id="@+id/product_image_item"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            android:layout_below="@id/product_name_item"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_below="@id/product_image_item"
+            android:layout_gravity="start"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/product_restaurant_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"/>
+
+            <TextView
+                android:id="@+id/product_price_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="15sp"
+                android:textAlignment="center"
+                android:layout_margin="10dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textColor="@color/colorWhite"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "456721570253",
+    "firebase_url": "https://emicuna-eae69.firebaseio.com",
+    "project_id": "emicuna-eae69",
+    "storage_bucket": "emicuna-eae69.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:456721570253:android:32e8bf96a235afb444cc84",
+        "android_client_info": {
+          "package_name": "com.example.emicuna"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "456721570253-vqqkln4rnuteo0fa4491nsuph1ggko5j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.emicuna",
+            "certificate_hash": "9d2e238ad1efb55a6fcaf994280139479dc84d40"
+          }
+        },
+        {
+          "client_id": "456721570253-a941vr3crhat1k14squi2mml7ghdrt6v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2fN2wX5dKvZQHMbXdnJgvinuad5LQkIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "456721570253-a941vr3crhat1k14squi2mml7ghdrt6v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
