@@ -67,11 +67,11 @@ public class HomeActivity extends AppCompatActivity {
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        //View headerView = navigationView.getHeaderView(0);
-        //TextView userNameTextView = headerView.findViewById(R.id.user_profile_name);
-        //CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
+        View headerView = navigationView.getHeaderView(0);
+        TextView userNameTextView = headerView.findViewById(R.id.user_profile_name);
+        CircleImageView profileImageView = headerView.findViewById(R.id.user_profile_image);
 
-        //userNameTextView.setText(Prevalent.currentOnlineUser.getName());
+        userNameTextView.setText(Prevalent.currentOnlineUser.getName());
         //Picasso.get().load(Prevalent.currentOnlineUser.getImage()).placeholder(R.drawable.profile).into(profileImageView);
 
         recyclerView = findViewById(R.id.recycler);
@@ -98,8 +98,8 @@ public class HomeActivity extends AppCompatActivity {
                 }
                 else if (id == R.id.nav_settings)
                 {
-                 /*   Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
-                    startActivity(intent); */
+                    Intent intent = new Intent(HomeActivity.this, SettingsActivity.class);
+                    startActivity(intent);
                 }
                 else if (id == R.id.nav_logout)
                 {
