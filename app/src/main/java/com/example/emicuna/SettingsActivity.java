@@ -34,6 +34,7 @@ import java.util.HashMap;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class SettingsActivity extends AppCompatActivity {
+
     private CircleImageView profileImageView;
     private EditText fullNameEditText, userPhoneEditText, addressEditText;
     private TextView profileChange, closeTxtBtn, saveTxtBtn;
@@ -99,8 +100,9 @@ public class SettingsActivity extends AppCompatActivity {
         userMap.put("name", fullNameEditText.getText().toString());
         userMap.put("address", addressEditText.getText().toString());
         userMap.put("phoneOrder", userPhoneEditText.getText().toString());
+        ref.child(Prevalent.currentOnlineUser.getPhone()).updateChildren(userMap);
 
-        startActivity(new Intent(SettingsActivity.this, MainActivity.class));
+        startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
         Toast.makeText(SettingsActivity.this, "Perfil personal actualizado", Toast.LENGTH_SHORT).show();
         finish();
     }
@@ -139,7 +141,7 @@ public class SettingsActivity extends AppCompatActivity {
     private void uploadImage() {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Actualizando perfil");
-        progressDialog.setMessage("Espere, estamos actualizando tu informacion");
+        progressDialog.setMessage("Espere, estamos actualizando su informacion");
         progressDialog.setCanceledOnTouchOutside(false);
         progressDialog.show();
 
@@ -174,7 +176,7 @@ public class SettingsActivity extends AppCompatActivity {
                         ref.child(Prevalent.currentOnlineUser.getPhone()).updateChildren(userMap);
 
                         progressDialog.dismiss();
-                        startActivity(new Intent(SettingsActivity.this, MainActivity.class));
+                        startActivity(new Intent(SettingsActivity.this, HomeActivity.class));
                         Toast.makeText(SettingsActivity.this, "Perfil personal actualizado", Toast.LENGTH_SHORT).show();
                         finish();
                     }
