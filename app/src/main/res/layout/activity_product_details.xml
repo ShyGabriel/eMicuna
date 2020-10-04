@@ -67,16 +67,18 @@
         >
     </com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/add_product_to_cart_btn"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:elevation="6dp"-->
-<!--        android:backgroundTint="@color/colorWhite"-->
-<!--        android:src="@drawable/ic_cart"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_alignParentRight="true"-->
-<!--        android:layout_margin="15dp"-->
-<!--        />-->
+    <Button
+
+        android:id="@+id/pd_add_to_cart_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:layout_margin="15dp"
+        android:layout_alignParentBottom="true"
+        android:text="Añadir al carro"
+        android:textColor="@color/colorWhite"
+        android:textSize="18dp"
+         />
+
 
 </RelativeLayout>
