@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
@@ -9,11 +10,15 @@
     tools:context=".HomeActivity"
     tools:openDrawer="start">
 
+
+
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-        <com.google.android.material.appbar.AppBarLayout
+
+                <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar"
@@ -28,6 +33,9 @@
                     android:layout_height="wrap_content"
                     app:theme="@style/ToolbarThemeContenido"/>
 
+
+
+
         </com.google.android.material.appbar.AppBarLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
@@ -36,6 +44,8 @@
                     android:layout_marginTop="60dp"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
+
+                <include layout="@layout/app_bar_home" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -47,5 +57,9 @@
             app:menu="@menu/main_menu"
             android:layout_gravity="start"
             />
+
+
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

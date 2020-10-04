@@ -23,7 +23,9 @@ import com.example.emicuna.Prevalent.Prevalent;
 import com.example.emicuna.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -36,13 +38,14 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import io.paperdb.Paper;
 
 
-public class HomeActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity  {
     private DrawerLayout drawer;
     private NavigationView navigationView;
     private Toolbar toolbar;
     private ActionBarDrawerToggle toggle;
     private DatabaseReference ProductsRef;
     private RecyclerView recyclerView;
+    private FloatingActionButton fab;
     RecyclerView.LayoutManager layoutManager;
     private FirebaseAuth mAuth;
 
@@ -62,6 +65,17 @@ public class HomeActivity extends AppCompatActivity {
         drawer = findViewById(R.id.drawer_layout);
 
         setSupportActionBar(toolbar);
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent (HomeActivity.this,CartActivity.class);
+                startActivity(intent);
+            }
+        });
 
         toggle = new ActionBarDrawerToggle(this, drawer,toolbar,R.string.open,R.string.close);
         drawer.addDrawerListener(toggle);
@@ -86,7 +100,8 @@ public class HomeActivity extends AppCompatActivity {
 
                 if (id == R.id.nav_cart)
                 {
-
+                    Intent intent = new Intent (HomeActivity.this,CartActivity.class);
+                    startActivity(intent);
                 }
                 else if (id == R.id.nav_order)
                 {
@@ -172,4 +187,5 @@ public class HomeActivity extends AppCompatActivity {
             super.onBackPressed();
         }
     }
+
 }
