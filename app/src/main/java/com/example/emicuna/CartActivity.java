@@ -77,8 +77,8 @@ public class CartActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         CharSequence options[] = new CharSequence[]{
-                                "Editar",
-                                "Eliminar"
+                                "Edit",
+                                "Remove"
                         };
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(CartActivity.this);
