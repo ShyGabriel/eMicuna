@@ -34,6 +34,8 @@ public class CartActivity extends AppCompatActivity {
     private Button NextProcessBtn;
     private TextView txtTotalAmount;
 
+    private int overTotalPrice = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,17 @@ public class CartActivity extends AppCompatActivity {
         NextProcessBtn = (Button) findViewById(R.id.next_btn);
         txtTotalAmount = (TextView) findViewById(R.id.total_price);
 
+        NextProcessBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtTotalAmount.setText("Total a pagar: S/. "+ String.valueOf(overTotalPrice));
+
+                Intent intent = new Intent(CartActivity.this, ConfirmFinalOrderActivity.class);
+                intent.putExtra("Total Price", String.valueOf(overTotalPrice));
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     @Override
@@ -69,16 +82,19 @@ public class CartActivity extends AppCompatActivity {
             @Override
             protected void onBindViewHolder(@NonNull CartViewHolder holder, int position, @NonNull final Cart model) {
 
-                holder.txtProductQuantity.setText("Cantidad = " + model.getQuantity());
-                holder.txtProductPrice.setText("Precio = "  + model.getPrice());
+                holder.txtProductQuantity.setText(model.getQuantity());
+                holder.txtProductPrice.setText(model.getPrice());
                 holder.txtProductName.setText(model.getPname());
+
+                int oneTypeProductTPrice = ((Integer.valueOf(model.getPrice()))) * Integer.valueOf(model.getQuantity());
+                overTotalPrice = overTotalPrice + oneTypeProductTPrice;
 
                 holder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
                         CharSequence options[] = new CharSequence[]{
-                                "Edit",
-                                "Remove"
+                                "Editar",
+                                "Eliminar"
                         };
 
                         AlertDialog.Builder builder = new AlertDialog.Builder(CartActivity.this);

@@ -33,7 +33,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private Button addToCartButton;
     private ImageView productImage;
     private ElegantNumberButton numberButton;
-    private TextView productPrice, productDescription, productName;
+    private TextView productPrice, productDescription, productName, productRestaurant;
     private String productID = "";
 
 
@@ -50,6 +50,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         productName = (TextView) findViewById(R.id.product_name_details);
         productDescription = (TextView) findViewById(R.id.product_description_details);
         productPrice = (TextView) findViewById(R.id.product_price_details);
+        productRestaurant = findViewById(R.id.product_restaurant_details);
 
         getProductDetails(productID);
 
@@ -78,9 +79,11 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("pid", productID);
         cartMap.put("pname", productName.getText().toString());
         cartMap.put("price", productPrice.getText().toString());
+        cartMap.put("restaurant", productRestaurant.getText().toString());
         cartMap.put("date", saveCurrentDate);
         cartMap.put("time", saveCurrentTime);
         cartMap.put("quantity", numberButton.getNumber());
+
         cartMap.put("discount", "");
 
         cartListRef.child("User View").child(Prevalent.currentOnlineUser.getPhone())
@@ -100,7 +103,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
 
                                             if (task.isSuccessful()){
-                                                Toast.makeText(ProductDetailsActivity.this,"agregado al carrito", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(ProductDetailsActivity.this,"Agregado al carrito", Toast.LENGTH_SHORT).show();
 
                                                 Intent intent = new Intent(ProductDetailsActivity.this, HomeActivity.class);
                                                 startActivity(intent);
@@ -125,8 +128,9 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     Products products = dataSnapshot.getValue(Products.class);
 
                     productName.setText(products.getProductName());
-                    productPrice.setText(("S./") + products.getPrice());
+                    productPrice.setText(products.getPrice());
                     productDescription.setText(products.getDescription());
+                    productRestaurant.setText(products.getRestaurant());
                     Picasso.get().load(products.getImage()).into(productImage);
 
                 }

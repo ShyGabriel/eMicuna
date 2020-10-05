@@ -117,6 +117,7 @@
         android:text="Añadir"
         android:layout_alignParentBottom="true"
         android:textColor="@color/colorWhite"
+
         />
 
 </RelativeLayout>

@@ -4,9 +4,13 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardCornerRadius="10dp"
-    android:layout_margin="15dp">
+    android:layout_marginStart="15dp"
+    android:layout_marginEnd="15dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp">
 
     <RelativeLayout
+        android:background="@color/colorAccent"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
@@ -17,7 +21,7 @@
             android:textSize="20sp"
             android:layout_margin="10dp"
             android:textStyle="bold"
-            android:textColor="@color/colorPrimaryText"/>
+            android:textColor="@color/colorWhite"/>
         <ImageView
             android:id="@+id/product_image_item"
             android:layout_width="match_parent"
@@ -26,7 +30,7 @@
             android:scaleType="centerCrop"/>
 
         <LinearLayout
-            android:background="@color/colorPrimary"
+            android:background="@color/colorPrimaryDark"
             android:layout_width="match_parent"
             android:layout_below="@id/product_image_item"
             android:layout_gravity="start"
