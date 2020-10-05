@@ -36,7 +36,8 @@
         android:id="@+id/scrollView"
         android:layout_below="@id/tv_desc"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="135dp">
 
     <LinearLayout
         android:id="@+id/linear_layout"
@@ -44,7 +45,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
-        android:layout_marginTop="25dp">
+        android:layout_marginTop="0dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cv_fav"
@@ -160,5 +161,31 @@
     </LinearLayout>
 
     </ScrollView>
+
+    <Button
+        android:id="@+id/check_orders_btn"
+        android:layout_above="@id/logout_btn"
+        android:background="@drawable/main_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorWhite"
+        android:text="Verificar nuevos pedidos"/>
+
+    <Button
+        android:id="@+id/logout_btn"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/secondary_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/colorPrimaryText"
+        android:text="Cerrar sesion"/>
 
 </RelativeLayout>

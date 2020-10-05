@@ -34,7 +34,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
     private ImageView productImage;
     private ElegantNumberButton numberButton;
     private TextView productPrice, productDescription, productName, productRestaurant;
-    private String productID = "";
+    private String productID = "", state = "Normal";
 
 
     @Override
@@ -57,9 +57,22 @@ public class ProductDetailsActivity extends AppCompatActivity {
         addToCartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                addingToCartList();
+
+                if (state.equals("Order Shipped") || state.equals("Order Placed")){
+                    Toast.makeText(ProductDetailsActivity.this, "No puedes añadir mas pedidos una vez hecha la orden.", Toast.LENGTH_LONG).show();
+                }
+                else{
+                    addingToCartList();
+                }
             }
         });
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        checkOrderState();
     }
 
     private void addingToCartList() {
@@ -133,6 +146,32 @@ public class ProductDetailsActivity extends AppCompatActivity {
                     productRestaurant.setText(products.getRestaurant());
                     Picasso.get().load(products.getImage()).into(productImage);
 
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+    private void checkOrderState(){
+        DatabaseReference ordersRef;
+        ordersRef = FirebaseDatabase.getInstance().getReference()
+                .child("Orders")
+                .child(Prevalent.currentOnlineUser.getPhone());
+        ordersRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()){
+                    String shippingState = snapshot.child("state").getValue().toString();
+
+                    if (shippingState.equals("Entregado")){
+                        state = "Order Shipped";
+                    }
+                    else if (shippingState.equals("No entregado")){
+                        state = "Order Placed";
+                    }
                 }
             }
 
