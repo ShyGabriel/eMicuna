@@ -5,8 +5,8 @@
         <item android:id="@+id/nav_cart"
             android:title="Carrito de compras"
             android:icon="@drawable/ic_cart"/>
-        <item android:id="@+id/nav_order"
-            android:title="Ordenes"
+        <item android:id="@+id/nav_search"
+            android:title="Buscar"
             android:icon="@drawable/ic_order"/>
         <item android:id="@+id/nav_category"
             android:title="Categorias"
