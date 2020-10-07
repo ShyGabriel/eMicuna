@@ -69,7 +69,7 @@ public class AdminNewOrdersActivity extends AppCompatActivity {
                     public void onClick(View view) {
 
                         CharSequence options[] = new CharSequence[]{
-                                "Yes",
+                                "Si",
                                 "No"
                         };
                         AlertDialog.Builder builder = new AlertDialog.Builder(AdminNewOrdersActivity.this);

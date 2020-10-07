@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminMaintainProductsActivity">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Editar comida/producto"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="25sp"
+        android:textAlignment="center"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/tv1"
+        app:cardCornerRadius="15dp"
+        android:layout_width="match_parent"
+        android:layout_margin="15dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/product_image_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <EditText
+                android:id="@+id/product_name_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@id/product_image_maintain"
+                android:drawableStart="@drawable/ic_food"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:hint="Nombre de la comida/producto"
+                />
+
+            <EditText
+                android:id="@+id/product_price_maintain"
+                android:layout_below="@id/product_name_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_price"
+                android:drawablePadding="10dp"
+                android:inputType="phone"
+                android:hint="Precio"
+                />
+
+            <EditText
+                android:id="@+id/product_restaurant_maintain"
+                android:layout_below="@id/product_price_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginTop="5dp"
+                android:drawableStart="@drawable/ic_address"
+                android:drawablePadding="10dp"
+                android:inputType="phone"
+                android:hint="Restaurant/Tienda"
+                />
+
+            <EditText
+                android:id="@+id/product_description_maintain"
+                android:layout_below="@id/product_restaurant_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:drawableStart="@drawable/ic_order"
+                android:drawablePadding="10dp"
+                android:inputType="text"
+                android:layout_marginBottom="20dp"
+                android:hint="Descripcion"
+                />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/apply_changes_btn"
+        android:text="Aplicar cambios"
+        android:textColor="@color/colorWhite"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/main_button"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

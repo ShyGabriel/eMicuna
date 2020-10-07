@@ -16,39 +16,44 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
 
-
-        <com.rey.material.widget.EditText
-            android:id="@+id/search_product_name"
-            android:layout_width="290dp"
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="buscar por orden"
-            android:textSize="18dp"
-            android:textStyle="bold"
-            android:background="@color/colorWhite"
-            android:padding="9dp"
-            android:layout_marginStart="5dp"
-            android:layout_centerVertical="true"
-            android:textColorHint="@color/colorPrimaryDark"
-            />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/search_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Buscar"
-            android:textColor="@color/colorWhite"
-            android:textSize="16dp"
-            android:textStyle="bold"
-            android:padding="9dp"
-            android:layout_centerInParent="true"
-            android:background="@color/colorPrimaryDark"
-            android:layout_toRightOf="@id/search_product_name"
-            />
-        
+            <EditText
+                android:id="@+id/search_product_name"
+                android:layout_width="0dp"
+                android:layout_weight="15"
+                android:layout_height="wrap_content"
+                android:hint=" Buscar por orden"
+                android:drawableStart="@drawable/ic_order"
+                android:drawablePadding="3dp"
+                android:background="@drawable/search_background"
+                android:padding="10dp"
+                android:textColorHint="@color/colorSecondaryText"
+                />
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_margin="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Buscar"
+                android:layout_gravity="center"
+                android:layout_weight="0.1"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/main_button"
+                />
+
+        </LinearLayout>
+
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/search_list"
+        android:layout_marginTop="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/r5">

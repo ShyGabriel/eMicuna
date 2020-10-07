@@ -10,7 +10,7 @@ import android.widget.Button;
 
 public class AdminCategoryActivity extends AppCompatActivity {
     private CardView cvFav, cvPeru, cvFastFood, cvAntojo, cvBebida;
-    private Button logoutBtn, checkOrdersBtn;
+    private Button logoutBtn, checkOrdersBtn, maintainProductsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +19,7 @@ public class AdminCategoryActivity extends AppCompatActivity {
 
         logoutBtn = findViewById(R.id.logout_btn);
         checkOrdersBtn = findViewById(R.id.check_orders_btn);
+        maintainProductsBtn = findViewById(R.id.maintain_btn);
 
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +35,15 @@ public class AdminCategoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AdminCategoryActivity.this, AdminNewOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        maintainProductsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AdminCategoryActivity.this, HomeActivity.class);
+                intent.putExtra("Admin", "Admin");
                 startActivity(intent);
             }
         });

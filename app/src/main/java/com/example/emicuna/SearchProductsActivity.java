@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.emicuna.Model.Products;
 import com.example.emicuna.ViewHolder.ProductViewHolder;
@@ -18,7 +19,6 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.rey.material.widget.EditText;
 import com.squareup.picasso.Picasso;
 
 public class SearchProductsActivity extends AppCompatActivity {
@@ -58,7 +58,7 @@ public class SearchProductsActivity extends AppCompatActivity {
 
         FirebaseRecyclerOptions<Products> options =
                 new FirebaseRecyclerOptions.Builder<Products>()
-                .setQuery(reference.orderByChild("pname").startAt(SearchInput), Products.class)
+                .setQuery(reference.orderByChild("productName").startAt(SearchInput), Products.class)
                 .build();
 
         FirebaseRecyclerAdapter<Products, ProductViewHolder> adapter =
@@ -67,7 +67,7 @@ public class SearchProductsActivity extends AppCompatActivity {
                     protected void onBindViewHolder(@NonNull ProductViewHolder holder, int position, @NonNull final Products model) {
 
                         holder.txtProductName.setText(model.getProductName());
-                        holder.txtProductRestaurant.setText(model.getDescription());
+                        holder.txtProductRestaurant.setText(model.getRestaurant());
                         holder.txtProductPrice.setText("S/. " + model.getPrice());
                         Picasso.get().load(model.getImage()).into(holder.imageView);
 

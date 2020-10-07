@@ -7,7 +7,7 @@
             android:icon="@drawable/ic_cart"/>
         <item android:id="@+id/nav_search"
             android:title="Buscar"
-            android:icon="@drawable/ic_order"/>
+            android:icon="@drawable/ic_search"/>
         <item android:id="@+id/nav_category"
             android:title="Categorias"
             android:icon="@drawable/ic_category"/>
