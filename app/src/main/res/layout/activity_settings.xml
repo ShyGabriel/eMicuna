@@ -120,4 +120,19 @@
         android:inputType="text"
         android:textColor="@color/colorPrimaryText"/>
 
+    <Button
+        android:id="@+id/security_questions_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/settings_address"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:drawablePadding="15dp"
+        android:background="@color/colorPrimary"
+        android:textColor="@color/colorWhite"
+        android:padding="15dp"
+        android:text="Preguntas de Seguridad"
+        />
+
 </RelativeLayout>

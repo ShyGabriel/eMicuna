@@ -18,6 +18,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.emicuna.Admin.AdminMaintainProductsActivity;
 import com.example.emicuna.Model.Products;
 import com.example.emicuna.Prevalent.Prevalent;
 import com.example.emicuna.ViewHolder.ProductViewHolder;
@@ -25,13 +26,9 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -180,7 +177,7 @@ public class HomeActivity extends AppCompatActivity  {
                             public void onClick(View view) {
 
                                 if (type.equals("Admin")){
-                                    Intent intent = new Intent(HomeActivity.this,AdminMaintainProductsActivity.class);
+                                    Intent intent = new Intent(HomeActivity.this, AdminMaintainProductsActivity.class);
                                     intent.putExtra("pid", model.getPid());
                                     startActivity(intent);
                                 }

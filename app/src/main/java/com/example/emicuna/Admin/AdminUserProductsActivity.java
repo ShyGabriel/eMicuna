@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.emicuna.Model.Cart;
+import com.example.emicuna.R;
 import com.example.emicuna.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;

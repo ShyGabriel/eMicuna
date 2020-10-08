@@ -3,7 +3,6 @@ package com.example.emicuna;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +13,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.emicuna.Admin.AdminCategoryActivity;
 import com.example.emicuna.Model.Users;
 import com.example.emicuna.Prevalent.Prevalent;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -28,11 +27,12 @@ import com.rey.material.widget.CheckBox;
 import io.paperdb.Paper;
 
 public class LoginActivity extends AppCompatActivity {
+
     private Button loginBtn;
     private EditText inputNumber, inputPassword;
     private ProgressDialog loadingBar;
     public String parentDBName = "Users";
-    private TextView adminLink, notAdminLink;
+    private TextView adminLink, notAdminLink, ForgetPasswordLink;
     private CheckBox chkBoxRemember;
     private FirebaseAuth mAuth;
     FirebaseAuth.AuthStateListener authStateListener;
@@ -50,6 +50,8 @@ public class LoginActivity extends AppCompatActivity {
         adminLink = findViewById(R.id.admin_panel_link);
         notAdminLink = findViewById(R.id.not_admin_panel_link);
 
+        ForgetPasswordLink = findViewById(R.id.forgot_password_link);
+
         chkBoxRemember = findViewById(R.id.remember_me_chk);
         Paper.init(this);
 
@@ -60,6 +62,15 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 loginUser();
+            }
+        });
+
+        ForgetPasswordLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent (LoginActivity.this,ResetPasswordActivity.class);
+                intent.putExtra("login","check");
+                startActivity(intent);
             }
         });
 
