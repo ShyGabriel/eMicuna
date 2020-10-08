@@ -18,6 +18,7 @@
         android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cv"
         android:layout_below="@id/tv1"
         app:cardCornerRadius="15dp"
         android:layout_width="match_parent"
@@ -93,14 +94,37 @@
 
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/apply_changes_btn"
-        android:text="Aplicar cambios"
-        android:textColor="@color/colorWhite"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/main_button"
-        android:layout_margin="15dp"
+    <LinearLayout
+        android:layout_below="@id/cv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/apply_changes_btn"
+            android:text="Aplicar cambios"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/main_button"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/delete_product_btn"
+            android:text="Eliminar comida/producto"
+            android:textColor="@color/colorPrimaryDark"
+            android:background="@drawable/secondary_button"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>
