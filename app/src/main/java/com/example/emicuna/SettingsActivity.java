@@ -76,7 +76,7 @@ public class SettingsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent (SettingsActivity.this,ResetPasswordActivity.class);
-                intent.putExtra("settings","check");
+                intent.putExtra("check","settings");
                 startActivity(intent);
             }
         });

@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.child(parentDBName).child(phone).exists()){
+
                     Users userData = snapshot.child(parentDBName).child(phone).getValue(Users.class);
 
                     if (userData.getPhone().equals(phone)){
