@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Buyers;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.emicuna.Admin.AdminMaintainProductsActivity;
 import com.example.emicuna.Model.Products;
 import com.example.emicuna.Prevalent.Prevalent;
+import com.example.emicuna.R;
 import com.example.emicuna.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -77,7 +78,7 @@ public class HomeActivity extends AppCompatActivity  {
             public void onClick(View view) {
 
                 if (!type.equals("Admin")){
-                    Intent intent = new Intent (HomeActivity.this,CartActivity.class);
+                    Intent intent = new Intent (HomeActivity.this, CartActivity.class);
                     startActivity(intent);
                 }
 
@@ -117,7 +118,7 @@ public class HomeActivity extends AppCompatActivity  {
                 else if (id == R.id.nav_search)
                 {
                     if (!type.equals("Admin")){
-                        Intent intent = new Intent (HomeActivity.this,SearchProductsActivity.class);
+                        Intent intent = new Intent (HomeActivity.this, SearchProductsActivity.class);
                         startActivity(intent);
                     }
 
@@ -182,7 +183,7 @@ public class HomeActivity extends AppCompatActivity  {
                                     startActivity(intent);
                                 }
                                 else {
-                                    Intent intent = new Intent(HomeActivity.this,ProductDetailsActivity.class);
+                                    Intent intent = new Intent(HomeActivity.this, ProductDetailsActivity.class);
                                     intent.putExtra("pid", model.getPid());
                                     startActivity(intent);
                                 }

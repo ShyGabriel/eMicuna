@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.emicuna.Model.Products;
+import com.example.emicuna.R;
 import com.example.emicuna.ViewHolder.ProductViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -75,7 +76,7 @@ public class SearchProductsActivity extends AppCompatActivity {
                             @Override
                             public void onClick(View view) {
 
-                                Intent intent = new Intent(SearchProductsActivity.this,ProductDetailsActivity.class);
+                                Intent intent = new Intent(SearchProductsActivity.this, ProductDetailsActivity.class);
                                 intent.putExtra("pid", model.getPid());
                                 startActivity(intent);
 

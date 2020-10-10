@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.example.emicuna.Model.Cart;
 import com.example.emicuna.Prevalent.Prevalent;
+import com.example.emicuna.R;
 import com.example.emicuna.ViewHolder.CartViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -110,7 +111,7 @@ public class CartActivity extends AppCompatActivity {
                             public void onClick(DialogInterface dialogInterface, int i) {
 
                                 if(i == 0){
-                                    Intent intent = new Intent(CartActivity.this,ProductDetailsActivity.class);
+                                    Intent intent = new Intent(CartActivity.this, ProductDetailsActivity.class);
                                     intent.putExtra("pid", model.getPid());
                                     startActivity(intent);
 
@@ -126,7 +127,7 @@ public class CartActivity extends AppCompatActivity {
                                                 public void onComplete(@NonNull Task<Void> task) {
                                                     Toast.makeText(CartActivity.this,"Item eliminado",Toast.LENGTH_SHORT).show();
 
-                                                    Intent intent = new Intent(CartActivity.this,HomeActivity.class);
+                                                    Intent intent = new Intent(CartActivity.this, HomeActivity.class);
                                                     startActivity(intent);
 
                                                 }

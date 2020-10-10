@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.emicuna.Prevalent.Prevalent;
+import com.example.emicuna.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
@@ -109,7 +110,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                     if(task.isSuccessful()){
                         Toast.makeText(ResetPasswordActivity.this, "Respondiste las preguntas de seguridad correctamente", Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(ResetPasswordActivity.this,HomeActivity.class);
+                        Intent intent = new Intent(ResetPasswordActivity.this, HomeActivity.class);
                         startActivity(intent);
                     }
                 }
@@ -205,7 +206,7 @@ public class ResetPasswordActivity extends AppCompatActivity {
                                                             if (task.isSuccessful()){
                                                                 Toast.makeText(ResetPasswordActivity.this, "Contraseña restablecida", Toast.LENGTH_SHORT).show();
 
-                                                                Intent intent = new Intent(ResetPasswordActivity.this,LoginActivity.class);
+                                                                Intent intent = new Intent(ResetPasswordActivity.this, LoginActivity.class);
                                                                 startActivity(intent);
                                                             }
                                                         }

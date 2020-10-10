@@ -8,8 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.emicuna.HomeActivity;
-import com.example.emicuna.MainActivity;
+import com.example.emicuna.Buyers.HomeActivity;
+import com.example.emicuna.Buyers.MainActivity;
 import com.example.emicuna.R;
 
 public class AdminCategoryActivity extends AppCompatActivity {

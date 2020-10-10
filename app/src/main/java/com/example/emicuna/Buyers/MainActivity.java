@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -11,10 +11,13 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.emicuna.Model.Users;
 import com.example.emicuna.Prevalent.Prevalent;
+import com.example.emicuna.R;
+import com.example.emicuna.Sellers.SellerRegistrationActivity;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private Button joinNowBtn, loginBtn;
     private String parentDBName = "Users";
     private ProgressDialog loadingBar;
+    private TextView sellerBegin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +42,22 @@ public class MainActivity extends AppCompatActivity {
 
         joinNowBtn = findViewById(R.id.main_join_now_btn);
         loginBtn   = findViewById(R.id.main_login_btn);
+        sellerBegin = findViewById(R.id.seller_begin);
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+
+                startActivity(intent);
+            }
+        });
+
+        sellerBegin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SellerRegistrationActivity.class);
 
                 startActivity(intent);
             }

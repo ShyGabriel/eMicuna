@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.emicuna.Prevalent.Prevalent;
+import com.example.emicuna.R;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -75,7 +76,7 @@ public class SettingsActivity extends AppCompatActivity {
         securityQuestionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (SettingsActivity.this,ResetPasswordActivity.class);
+                Intent intent = new Intent (SettingsActivity.this, ResetPasswordActivity.class);
                 intent.putExtra("check","settings");
                 startActivity(intent);
             }

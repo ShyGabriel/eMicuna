@@ -15,16 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon">
-        <activity android:name=".ResetPasswordActivity"></activity>
+        <activity android:name=".Sellers.SellerLoginActivity"></activity>
+        <activity android:name=".Sellers.SellerRegistrationActivity" />
+        <activity android:name=".Buyers.ResetPasswordActivity" />
         <activity android:name=".Admin.AdminMaintainProductsActivity" />
-        <activity android:name=".SearchProductsActivity" />
+        <activity android:name=".Buyers.SearchProductsActivity" />
         <activity android:name=".Admin.AdminUserProductsActivity" />
         <activity android:name=".Admin.AdminNewOrdersActivity" />
-        <activity android:name=".ConfirmFinalOrderActivity" />
-        <activity android:name=".CartActivity" />
-        <activity android:name=".ProductDetailsActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".Buyers.ConfirmFinalOrderActivity" />
+        <activity android:name=".Buyers.CartActivity" />
+        <activity android:name=".Buyers.ProductDetailsActivity" />
+        <activity android:name=".Buyers.SettingsActivity" />
+        <activity android:name=".Buyers.HomeActivity" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,13 +37,13 @@
         <activity android:name=".Admin.AdminCategoryActivity" />
         <activity android:name=".Admin.AdminAddNewProductActivity" />
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Buyers.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Buyers.LoginActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Buyers.MainActivity"
             android:screenOrientation="portrait" /> <!-- Image-Cropper -->
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

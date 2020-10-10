@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Buyers.MainActivity">
 
     <ImageView
         android:id="@+id/img_logo"
@@ -37,20 +37,6 @@
         android:layout_margin="30dp"/>
 
     <Button
-        android:id="@+id/main_login_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/main_button"
-        android:text="Tengo Cuenta"
-        android:textColor="@color/colorWhite"
-        />
-
-    <Button
         android:id="@+id/main_join_now_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -61,6 +47,33 @@
         android:background="@drawable/secondary_button"
         android:text="Unirme ahora"
         android:textColor="@color/colorPrimaryDark"
+        />
+
+    <Button
+        android:id="@+id/main_login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/seller_begin"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/main_button"
+        android:text="Tengo Cuenta"
+        android:textColor="@color/colorWhite"
+        />
+
+    <TextView
+        android:id="@+id/seller_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiere convertirse en vendedor?"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimaryText"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="10dp"
         />
 
 </RelativeLayout>

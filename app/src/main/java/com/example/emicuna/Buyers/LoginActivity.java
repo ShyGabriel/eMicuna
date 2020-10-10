@@ -1,4 +1,4 @@
-package com.example.emicuna;
+package com.example.emicuna.Buyers;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.example.emicuna.Admin.AdminCategoryActivity;
 import com.example.emicuna.Model.Users;
 import com.example.emicuna.Prevalent.Prevalent;
+import com.example.emicuna.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -68,7 +69,7 @@ public class LoginActivity extends AppCompatActivity {
         ForgetPasswordLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent (LoginActivity.this,ResetPasswordActivity.class);
+                Intent intent = new Intent (LoginActivity.this, ResetPasswordActivity.class);
                 intent.putExtra("check","login");
                 startActivity(intent);
             }
