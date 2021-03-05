@@ -68,7 +68,7 @@
         android:layout_height="wrap_content"
         android:text="Quiere convertirse en vendedor?"
         android:textSize="20dp"
-        android:textColor="@color/colorPrimaryText"
+        android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
